@@ -143,7 +143,6 @@ main .container-main .title-container{
 
 main .container-main .content{
   padding: 10px;
-  overflow-y: hidden;
 }
 
 main .container-main .content table {
@@ -159,7 +158,7 @@ table thead tr th {
 
 table tbody tr td{
   color: rgba(0, 0, 0, 0.7);
-  font-size: 18px;
+  font-size: 16px;
 }
 
 table tbody tr:nth-child(2n+1){

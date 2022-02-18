@@ -15,17 +15,19 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
+
           <% @students.each do |student| %>
-              <td><%= student.name %></td>
-              <td><%= student.registration %></td>
-              <td><%= student.teacher.name %></td>
-              <td><%= student.teacher.discipline %></td>
-              <td><%=  student.unity_one%></td>
-              <td><%=  student.unity_two%></td>
-              <td><%=  student.unity_three%></td>
+              <tr>
+                <td><%= student.name %></td>
+                <td><%= student.registration %></td>
+                <td><%= student.teacher.name %></td>
+                <td><%= student.teacher.discipline %></td>
+                <td><%=  student.unity_one%></td>
+                <td><%=  student.unity_two%></td>
+                <td><%=  student.unity_three%></td>
+              </tr>
           <% end %>
-        </tr>
+      
       </tbody>
 
     </table>
