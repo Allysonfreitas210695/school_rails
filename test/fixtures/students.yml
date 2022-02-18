@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  registration: 1
+  unity_one: 1.5
+  unity_two: 1.5
+  unity_three: 1.5
+  teacher: one
+
+two:
+  name: MyString
+  registration: 1
+  unity_one: 1.5
+  unity_two: 1.5
+  unity_three: 1.5
+  teacher: two

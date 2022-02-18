@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+    <title>AppSchool</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+        <div class="logo">
+          <h1>School</h1>
+        </div>
+        <div class="nav">
+          <ul>
+            <li>
+              <%= link_to 'home', root_path %>
+            </li>
+            <li>
+              <%= link_to 'Students', '#' %>
+            </li>
+            <li>
+              <%= link_to 'Teachers', '#' %>
+            </li>
+          </ul>
+        </div>
+    </header>
+    <main>
+      <div class="container">
+        <%= yield %>
+      </div>
+    </main>
+    <footer>
+      <div class="social-redes">
+        <ul>
+          <li>
+            <%= link_to 'https://www.facebook.com/bryan998138643', target:"_blank" do %>
+              <i class="devicon-facebook-plain colored"></i>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to 'https://www.linkedin.com/in/allyson-freitas-547171210/', target:"_blank" do %>
+              <i class="devicon-linkedin-plain colored"></i>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to 'https://twitter.com/misterbruno2020', target:"_blank" do %>
+               <i class="devicon-twitter-original colored"></i>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to 'https://github.com/Allysonfreitas210695', target:"_blank" do %>
+               <i class="devicon-github-original"></i>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <p>
+          <span class="text-description">
+            <%= link_to 'https://allysonfreitas210695.github.io/', target:'_blank' do %>
+              Dev Allyson
+            <% end %>
+          </span> © 2022</p>
+      </div>
+    </footer>
+  </body>
+</html>
