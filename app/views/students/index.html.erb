@@ -1,11 +1,34 @@
-<h1>Lista de Alunos</h1>
+<div class="container-main">
+  <h1 class="title-container">Lista de Alunos</h1>
 
-<% @students.each do |student| %>
-  <ul>
-    <li><%= student.name %></li>
-    <li><%= student.registration %></li>
-    <li><%=  student.unity_one%></li>
-    <li><%=  student.unity_two%></li>
-    <li><%=  student.unity_three%></li>
-  </ul>
-<% end %>
+  <div class="content">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Registration</th>
+          <th>Teacher</th>
+          <th>Disciplina</th>
+          <th>Unity 1</th>
+          <th>Unity 2</th>
+          <th>Unity 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <% @students.each do |student| %>
+              <td><%= student.name %></td>
+              <td><%= student.registration %></td>
+              <td><%= student.teacher.name %></td>
+              <td><%= student.teacher.discipline %></td>
+              <td><%=  student.unity_one%></td>
+              <td><%=  student.unity_two%></td>
+              <td><%=  student.unity_three%></td>
+          <% end %>
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+
+</div>
