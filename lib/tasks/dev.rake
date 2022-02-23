@@ -5,19 +5,13 @@ namespace :dev do
 
   desc "configurando o ambiente para dados fakes"
   task setup: :environment do
-    puts 'Criando os dados!'
-    %x(rails db:drop)
-    puts 'criando BD'
-    %x(rails db:create)
-    puts 'Migrando Dados BD'
-    %x(rails db:migrate)
-    puts 'Add teachers'
-    %x(rails dev:add_teachers)
-    puts 'Add students'
-    %x(rails dev:add_students)
-    puts 'finalizado com sucesso!'
+    spinner_show('Apagando o BD.....') { `rails db:drop` }
+    spinner_show('Criando o BD.....') { `rails db:create` }
+    spinner_show('Migrando Dados BD.....') { `rails db:migrate` }
+    spinner_show('Add teachers ao BD.....') { `rails dev:add_teachers` }
+    spinner_show('Add students ao BD.....') { `rails dev:add_students` }
   end
-
+  
   desc "Adicionando teachers ao sistema"
   task add_teachers: :environment do
     rand(5).times do |i|
@@ -42,5 +36,14 @@ namespace :dev do
         teacher: Teacher.all.sample
       )
     end
+  end
+
+  private
+
+  def spinner_show(msg_start, msg_end = 'Concluido com sucesso!')
+    spinner = TTY::Spinner.new("[:spinner] #{msg_start}")
+    yield
+    sleep(2)
+    spinner.success(msg_end)
   end
 end
