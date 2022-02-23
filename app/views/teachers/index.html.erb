@@ -1,5 +1,10 @@
 <div class="container-main">
-  <h1 class="title-container">Lista de Professores</h1>
+  <h1 class="title-container">
+    Lista de Professores
+    <%= link_to "#", class:'btn-submit' do %>
+      <img src="https://img.icons8.com/color/48/000000/add--v1.png" style="width: 30px; height: 28px;"/>
+    <% end %>
+  </h1>
 
   <div class="content">
     <table>
@@ -9,6 +14,7 @@
           <th>Registration</th>
           <th>Department</th>
           <th>Discipline</th>
+          <th style="display:none;"></th>
         </tr>
       </thead>
       <tbody>
@@ -19,6 +25,14 @@
                 <td><%= teacher.registration %></td>
                 <td><%= teacher.department %></td>
                 <td><%= teacher.discipline %></td>
+                <td>
+                  <%= link_to "edit", style:"border:none;" do %>
+                    <img src="https://img.icons8.com/external-anggara-flat-anggara-putra/32/000000/external-edit-user-interface-anggara-flat-anggara-putra-3.png"/>
+                  <% end %>
+                  <%= link_to "delete" do %>
+                    <img src="https://img.icons8.com/external-anggara-outline-color-anggara-putra/32/000000/external-delete-user-interface-anggara-outline-color-anggara-putra.png"/>
+                  <% end %>
+                </td>
               </tr>
           <% end %>
 

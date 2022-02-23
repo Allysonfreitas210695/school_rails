@@ -128,10 +128,9 @@ footer .copyright .text-description a:hover{
   text-decoration: underline;
 }
 
-
 main .container-main{
-  height: 400px;
-  width: 800px;
+  height: 550px;
+  width: 1000px;
   padding: 20px 30px;
 }
 
@@ -150,6 +149,10 @@ main .container-main .content table {
   text-align: center;
 }
 
+main .container-main .content table{
+  overflow: hidden;
+}
+
 table thead tr th {
   background: rgba(0, 0, 0, 0.8);
   color: #FFF;
@@ -163,4 +166,22 @@ table tbody tr td{
 
 table tbody tr:nth-child(2n+1){
   background: rgba(0, 0, 0, 0.4);
+}
+
+table tbody tr .btn-submit{
+  margin-left: auto;
+  height: inherit;
+
+}
+
+.title-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+}
+
+.btn-submit:hover{
+  width: 35px;
+  height: inherit;
 }

@@ -26,7 +26,7 @@ namespace :dev do
 
   desc "Adicionando students ao sistema"
   task add_students: :environment do
-    10.times do |i|
+    5.times do |i|
       Student.create!(
         name: Faker::Name.name,
         registration: Faker::Number.number(digits: 5),
@@ -43,7 +43,7 @@ namespace :dev do
   def spinner_show(msg_start, msg_end = 'Concluido com sucesso!')
     spinner = TTY::Spinner.new("[:spinner] #{msg_start}")
     yield
-    sleep(2)
+    sleep(1)
     spinner.success(msg_end)
   end
 end
