@@ -11,11 +11,11 @@ namespace :dev do
     spinner_show('Add teachers ao BD.....') { `rails dev:add_teachers` }
     spinner_show('Add students ao BD.....') { `rails dev:add_students` }
   end
-  
+
   desc "Adicionando teachers ao sistema"
   task add_teachers: :environment do
     rand(5).times do |i|
-      Teacher.create(
+      Teacher.create!(
         name: Faker::Name.name,
         registration: Faker::Number.number(digits: 5),
         department: DEPARTAMENT.sample,
@@ -26,8 +26,8 @@ namespace :dev do
 
   desc "Adicionando students ao sistema"
   task add_students: :environment do
-    rand(5).times do |i|
-      Student.create(
+    10.times do |i|
+      Student.create!(
         name: Faker::Name.name,
         registration: Faker::Number.number(digits: 5),
         unity_one: NOTAS.sample,
