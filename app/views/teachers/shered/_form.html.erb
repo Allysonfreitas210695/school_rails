@@ -1,1 +1,21 @@
-<h1><%= @teacher %></h1>
+<div class="container-main">
+  <%= form_with model: @teacher, local: true do |form| %>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+    <br>
+
+    <%= form.label :registration %>
+    <%= form.text_field :registration %>
+    <br>
+
+    <%= form.label :department %>
+    <%= form.text_field :department %>
+    <br>
+
+    <%= form.label :discipline %>
+    <%= form.text_field :discipline %>
+    <br>
+
+    <%= form.submit %>
+  <% end %>
+</div>
