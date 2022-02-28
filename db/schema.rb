@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_18_170201) do
+ActiveRecord::Schema.define(version: 2022_02_28_202334) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,10 +21,8 @@ ActiveRecord::Schema.define(version: 2022_02_18_170201) do
     t.float "unity_one", default: 0.0
     t.float "unity_two", default: 0.0
     t.float "unity_three", default: 0.0
-    t.bigint "teacher_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["teacher_id"], name: "index_students_on_teacher_id"
   end
 
   create_table "teachers", force: :cascade do |t|
@@ -36,5 +34,4 @@ ActiveRecord::Schema.define(version: 2022_02_18_170201) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "students", "teachers"
 end

@@ -1,5 +1,5 @@
 namespace :dev do
-  DISCIPLINE = %w(tecnologia administracao engenheiro)
+  DISCIPLINE = ['Tecnologia', 'CeT']
   DEPARTAMENT = %w(A B C)
   NOTAS = %w(1 2 3 4 5 6 7 8 9 10)
 
@@ -33,7 +33,7 @@ namespace :dev do
         unity_one: NOTAS.sample,
         unity_two: NOTAS.sample,
         unity_three: NOTAS.sample,
-        teacher: Teacher.all.sample
+        # teacher: Teacher.all.sample
       )
     end
   end

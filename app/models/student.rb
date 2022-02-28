@@ -1,4 +1,3 @@
 class Student < ApplicationRecord
-  belongs_to :teacher
-  validates :name, :registration, :teacher,  presence: true
+  validates :name, :registration,  presence: true
 end
