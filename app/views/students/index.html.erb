@@ -1,6 +1,6 @@
 <div class="container-main">
   <h1 class="title-container">
-    Lista de Alunos
+    Lista de <%= Student.model_name.human(count: @students.size) %>
     <%= link_to new_student_path, class:'btn-submit' do %>
       <img src="https://img.icons8.com/color/48/000000/add--v1.png" style="width: 30px; height: 28px;"/>
     <% end %>
@@ -10,13 +10,13 @@
     <table>
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Registration</th>
-          <th>Teacher</th>
-          <th>Disciplina</th>
-          <th>Unity 1</th>
-          <th>Unity 2</th>
-          <th>Unity 3</th>
+          <th><%= t('table.name') %></th>
+          <th><%= t('table.registration') %></th>
+          <th><%= t('table.teacher') %></th>
+          <th><%= t('table.discipline') %></th>
+          <th><%= t('table.unity_one') %></th>
+          <th><%= t('table.unity_two') %></th>
+          <th><%= t('table.unity_three') %></th>
           <th style="display:none;"></th>
         </tr>
       </thead>
@@ -28,11 +28,11 @@
                 <td><%= student.registration %></td>
                 <td><%= student.teacher.name %></td>
                 <td><%= student.teacher.discipline %></td>
-                <td><%=  student.unity_one%></td>
-                <td><%=  student.unity_two%></td>
-                <td><%=  student.unity_three%></td>
+                <td><%=  student.unity_one %></td>
+                <td><%=  student.unity_two %></td>
+                <td><%=  student.unity_three %></td>
                 <td>
-                  
+
                   <%= link_to edit_student_path(student), style:"border:none;" do %>
                     <img src="https://img.icons8.com/external-anggara-flat-anggara-putra/32/000000/external-edit-user-interface-anggara-flat-anggara-putra-3.png"/>
                   <% end %>

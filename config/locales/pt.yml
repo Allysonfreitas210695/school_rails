@@ -1,0 +1,9 @@
+'pt-BR':
+  table:
+    name: Nome
+    registration: Matricula
+    teacher: Professor
+    discipline: Disciplina
+    unity_one: Unidade 1
+    unity_two: Unidade 2
+    unity_three: Unidade 3

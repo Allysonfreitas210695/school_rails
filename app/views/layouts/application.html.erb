@@ -24,10 +24,10 @@
               <%= link_to 'home', root_path %>
             </li>
             <li>
-              <%= link_to 'Students', students_path %>
+              <%= link_to Student.model_name.human(count: Student.count), students_path %>
             </li>
             <li>
-              <%= link_to 'Teachers', teachers_path %>
+              <%= link_to Teacher.model_name.human(count: Teacher.count), teachers_path %>
             </li>
           </ul>
         </div>

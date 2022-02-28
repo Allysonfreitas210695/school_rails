@@ -1,0 +1,38 @@
+'pt-BR':
+  activerecord:
+    models:
+      student:
+        one: 'Estudante'
+        other: 'Estudantes'
+      teacher:
+        one: 'Professor'
+        other: 'Professores'
+    attributes:
+      student:
+        id: 'Código'
+        name: 'Nome'
+        registration: 'Matricula'
+        teacher: 'Professor'
+        teacher_id: 'Professor'
+        discipline: 'Disciplina'
+        unity_one: 'Unidade 1'
+        unity_two: 'Unidade 2'
+        unity_three: 'Unidade 3'
+        updated_at: 'Atualizado em'
+        created_at: 'Criado em'
+      teacher:
+        id: 'categoria'
+        name: 'Nome'
+        registration: 'Matricula'
+        department: 'Departamento'
+        discipline: 'Disciplina'
+        updated_at: 'Atualizado em'
+        created_at: 'Criado em'
+      errors:
+        messages:
+          blank: 'não pode ser em branco'
+          invalid: 'inválido'
+          taken: 'já cadastrado'
+          confirmation: 'não é igual. Insira a mesma senha'
+          too_long: 'Muito grande. Máximo %{count} caracteres'
+          too_short: 'Muito curto. Máximo %{count} caracteres'
