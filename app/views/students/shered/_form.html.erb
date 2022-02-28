@@ -1,1 +1,31 @@
-<h1><%= @student.name.blank? %></h1>
+<div class="container-main">
+  <%= form_with model: @student, local: true do |form| %>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+    <br>
+
+    <%= form.label :registration %>
+    <%= form.text_field :registration %>
+    <br>
+
+    <%= form.label :teacher %>
+    <%= form.select(:teacher_id, teacher_all,
+     { include_blank: true })
+    %>
+    <br>
+
+    <%= form.label :unity_one %>
+    <%= form.text_field :unity_one %>
+    <br>
+
+    <%= form.label :unity_two %>
+    <%= form.text_field :unity_two %>
+    <br>
+
+    <%= form.label :unity_three %>
+    <%= form.text_field :unity_three %>
+    <br>
+
+    <%= form.submit %>
+  <% end %>
+</div>
