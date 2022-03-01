@@ -194,3 +194,79 @@ table tbody tr .btn-submit{
     height: 79px;
   }
 }
+
+.container .container-show{
+  height: 450px;
+  width: 1000px;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+}
+
+.profile, .info-student {
+  padding: 15px;
+  font-size: 23px;
+  font-weight: normal;
+  flex: 1;
+}
+
+.profile {
+  border-right: 1px solid rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile p{
+  margin-bottom: 20px;
+}
+
+.profile .student p,
+{
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.profile .student span,
+.profile .registration span{
+  font-weight: 300;
+  font-size: 22px;
+}
+
+.image img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+
+}
+
+.line-style{
+ margin: 20px;
+ width: 200px;
+ height: 2px;
+ text-align: center;
+ background: rgba(0,0,0,0.6);
+}
+
+.info-student .description{
+  font-size: 30px;
+  font-weight: 700;
+  border-right: 5px solid blue;
+  margin-bottom: 15px;
+}
+
+.container-show .info-student .discipline .title p,
+.container-show .info-student .department p{
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.container-show .info-student .discipline span,
+.container-show .info-student .department span{
+  font-weight: 300;
+  font-size: 24px;
+}
+
+.container-show .info-student .department {
+  margin-top: 30px;
+}

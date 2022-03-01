@@ -1,5 +1,6 @@
 class StudentsController < ApplicationController
-  before_action :set_student, only: [:edit, :update, :destroy]
+  before_action :set_student, only: [:edit, :show, :update, :destroy]
+
 
   def index
     @students = Student.all.order(:name)
@@ -10,6 +11,8 @@ class StudentsController < ApplicationController
   end
 
   def edit; end
+
+  def show; end
 
   def update
     if@student.update(params_student)
@@ -44,10 +47,8 @@ class StudentsController < ApplicationController
     .permit(
             :name,
             :registration,
-            :teacher_id,
-            :unity_one,
-            :unity_two,
-            :unity_three
+            :discipline_id,
+            :avatar
           )
   end
 

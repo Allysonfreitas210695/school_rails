@@ -1,4 +1,4 @@
 class Teacher < ApplicationRecord
-  # has_many :students
-  validates :name, :registration, :department, :discipline, presence: true
+  belongs_to :discipline
+  validates :name, :registration, presence: true
 end

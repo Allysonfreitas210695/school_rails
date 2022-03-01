@@ -1,0 +1,45 @@
+<div class="container-show">
+  <div class="profile">
+    <div class="image">
+      <%= image_tag(url_for(@student.avatar)) %>
+    </div>
+    <div class="line-style"></div>
+    <div class="student">
+      <p>
+        Student:
+        <span><%= @student.name %></span>
+      </p>
+    </div>
+    <div class="registration">
+      <p>
+        Regitration:
+        <span><%= @student.registration %></span>
+      </p>
+    </div>
+  </div>
+
+  <div class="info-student start-column">
+    <div class="description">
+      List Discipline
+    </div>
+    <div class="discipline">
+      <div class="title">
+        <p>
+          Course:
+        </p>
+        <span>
+          <%= @student.discipline.name %>
+        </span>
+
+      </div>
+      <div class="department">
+        <p>
+          Department:
+        </p>
+        <span>
+          <%= @student.discipline.department %>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

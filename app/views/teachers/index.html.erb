@@ -12,8 +12,6 @@
         <tr>
           <th>Name</th>
           <th>Registration</th>
-          <th>Department</th>
-          <th>Discipline</th>
           <th style="display:none;"></th>
         </tr>
       </thead>
@@ -23,8 +21,6 @@
               <tr>
                 <td><%= teacher.name %></td>
                 <td><%= teacher.registration %></td>
-                <td><%= teacher.department %></td>
-                <td><%= teacher.discipline %></td>
                 <td>
                   <%= link_to edit_teacher_path(teacher), style:"border:none;" do %>
                     <img src="https://img.icons8.com/external-anggara-flat-anggara-putra/32/000000/external-edit-user-interface-anggara-flat-anggara-putra-3.png"/>
